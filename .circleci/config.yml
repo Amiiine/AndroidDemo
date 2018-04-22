@@ -32,8 +32,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: #gradle dependencies
-          - sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+     # - run: #gradle dependencies
+     override:
+         - sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
       - save_cache:
           paths:
             - ~/.gradle
