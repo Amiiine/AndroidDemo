@@ -33,8 +33,8 @@ jobs:
           - v1-dependencies-
 
       - run: #gradle dependencies
-        override:
-         - sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
