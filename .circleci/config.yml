@@ -16,7 +16,13 @@ jobs:
       # - image: circleci/postgres:9.4
 
     working_directory: ~/repo
-
+   dependencies:
+    pre:
+    - echo y | android update sdk --no-ui --all --filter "platform-tools, tools"
+    - echo y | android update sdk --no-ui --all --filter "android-24, build-tools-25.0.2"
+    - echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
+    - echo y | android update sdk --no-ui --all --filter "extra-android-support"
+    
     environment: #/usr/local/android-sdk-linux
      # ANDROID_HOME: /opt/android/sdk
                # Customize the JVM maximum heap limit
