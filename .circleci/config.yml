@@ -33,7 +33,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: echo "Mirkelam is working for you 👯"
+      - run: echo "Mirkelam is working for you 👯" $ANDROID_HOME
 
       - run:
          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
