@@ -7,10 +7,10 @@ jobs:
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
-      - checkout
+      #- checkout
      # - restore_cache:
       #    key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-       - run: echo "Android home : --> " $ANDROID_HOME
+     - run: echo "Android home : --> " $ANDROID_HOME
      - run:
          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
          command: sudo chmod +x ./gradlew
