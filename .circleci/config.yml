@@ -34,7 +34,7 @@ jobs:
 
       - run: #gradle dependencies
           name: Download Dependencies
-          command: sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradle dependencies #./gradlew androidDependencies
+          command: gradle dependencies #sudo ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies #./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
